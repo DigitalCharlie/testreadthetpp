@@ -124,7 +124,27 @@
         }
     };
 
+    var tooltips = ['HELLO1','HELLO2','HELLO3','HELLO4'];
+    var tooltipIndex = 0
+    var changingTooltip = false;
+    var changeText = function () {
+        var toolTip = $( '#tooltip' );
+        toolTip.html(tooltips[tooltipIndex]);        
+        if (tooltipIndex < tooltips.length - 1) {
+            tooltipIndex++;
+        }
+    }
+
     function evade(evt) {
+        if (!changingTooltip) {
+            changingTooltip = true;
+            changeText();
+            setTimeout(function() {
+                changingTooltip = false;
+            }, 1000);
+
+        }
+
         var $this = $(this),
             corner = $this.offset(),
             center = {x: corner.left + $this.outerWidth() / 2, y: corner.top + $this.outerHeight() / 2},
@@ -271,7 +291,7 @@ function lolNo (){
  
         target.removeAttr( 'title' );
         tooltip.css( 'opacity', 0 )
-               .html( tip )
+               .html( '' )
                .appendTo( 'body' );
 
         init_tooltip();
