@@ -159,7 +159,6 @@
     function beginEvade() {
         $(this).bind('mousemove', evade);
         showFooter ();
-        lolNo ();
     }
 
     function endEvade() {
@@ -170,6 +169,8 @@
         $('.readbutton').wrap('<span class="bumper" />')
         $('.bumper').bind('mouseover', beginEvade);
         $('.bumper').bind('mouseout', endEvade);
+        lolNo ();
+
 });
 </script>
 

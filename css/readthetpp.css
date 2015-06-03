@@ -197,7 +197,7 @@ h3 {
         height: 0;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-top: 10px solid #111;
+        border-top: 10px solid #0e293a;
         content: '';
         position: absolute;
         left: 50%;
@@ -208,7 +208,7 @@ h3 {
         #tooltip.top:after
         {
             border-top-color: transparent;
-            border-bottom: 10px solid #111;
+            border-bottom: 10px solid #0e293a;
             top: -20px;
             bottom: auto;
         }
