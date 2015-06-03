@@ -124,7 +124,7 @@
         }
     };
 
-    var tooltips = ['HELLO1','HELLO2','HELLO3','HELLO4'];
+    var tooltips = ['HELLO LOTS AND LOTS AND LOTS AND LOTS AND LOTS OF TIMES OKAY KEEP GOING','HELLO2','HELLO3','HELLO4'];
     var tooltipIndex = 0
     var changingTooltip = false;
     var changeText = function () {
@@ -290,8 +290,7 @@ function lolNo (){
             return false;
  
         target.removeAttr( 'title' );
-        tooltip.css( 'opacity', 0 )
-               .html( '' )
+        tooltip.html( '' )
                .appendTo( 'body' );
 
         init_tooltip();
